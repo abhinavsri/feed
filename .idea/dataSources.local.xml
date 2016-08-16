@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="feed dev" uuid="40b9f009-7a15-43da-858e-e3dfcc297005">
+      <user-name>root</user-name>
+      <user-password>dfc4dfcfdfd2dfdedfcedfcfdfccdfcbdfdfdfc6dfde</user-password>
+      <schema-pattern>rssfeed.*</schema-pattern>
+      <default-schemas>rssfeed.*</default-schemas>
+    </data-source>
+  </component>
+</project>
