@@ -6,11 +6,14 @@ import co.UpdateUrlCO
 class UrlController {
 
     def index() {
+
         render view: "/url/createUrl"
     }
 
     def createUrl(CreateUrlCO createUrlCO) {
+        print("CCCCCCCCCCCCCCCCCCCCCCCCC")
         if (createUrlCO.validate()) {
+            print("VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV")
             Url url = new Url(rssName: createUrlCO.rssName, rssUrl: createUrlCO.rssUrl)
             url.save(flush: true, failOnError: true)
             redirect action: "showUrl"
@@ -32,11 +35,9 @@ class UrlController {
     }
 
     def showUrl(Integer max) {
-        //  List url = Url.findAll()
-        println("#####################################################")
         println(params)
         List url = Url.createCriteria().listDistinct {
-            maxResults(2)
+            maxResults(5)
             firstResult(params.offset ? params.int('offset') : 0)
         }
         def listTotal = Url.count()
@@ -80,6 +81,9 @@ class UrlController {
             updateUrlCO.errors.each { print it }
             render view: "/url/updateUrl", model: [updateUrlCOErrors: updateUrlCO.errors]
         }
+    }
+    def homepage(){
+        render view: "/landing/homepage"
     }
 
 }

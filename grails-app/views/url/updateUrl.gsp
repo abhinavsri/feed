@@ -1,6 +1,6 @@
 <html>
 <head>
-    <meta name="layout" content="lay">
+    <meta name="layout" content="theme">
     <title>Update Url</title>
     %{--<link rel="stylesheet" href="${resource(dir: "css", file: "bootstrap.min.css")}"/>--}%
     %{--<script src="${resource(dir: "js", file: "jquery.min.js")}"></script>--}%
@@ -31,8 +31,8 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <div class="panel panel-login">
+        <div class="col-md-6 col-md-offset-2 col-lg-6 col-lg-offset-2 ">
+            <div class="panel panel-default">
                 <div class="panel-heading" style="margin-bottom: -26px;">
                     <div class="row">
                         <div class="col-xs-6">
@@ -57,8 +57,8 @@
                                     <input type="text" class="form-control" name="rssName" placeholder="rssName"
                                            id="rssName"
                                            tabindex="1" value="${rssName}">
-                                    <g:hasErrors bean="${updateUrlCOErrors}"></g:hasErrors><g:renderErrors
-                                            bean="${updateUrlCOErrors}" field="rssName" as="list"></g:renderErrors>
+                                    <g:hasErrors bean="${updateUrlCOErrors}"/><g:renderErrors
+                                            bean="${updateUrlCOErrors}" field="rssName" as="list"/>
 
                                 </div>
 
@@ -67,8 +67,8 @@
                                     <input type="textarea" class="form-control" name="rssUrl"
                                            placeholder="rssUrl" id="rssUrl" tabindex="1"
                                            value="${rssUrl}">
-                                    <g:hasErrors bean="${updateUrlCOErrors}"></g:hasErrors><g:renderErrors
-                                            bean="${updateUrlCOErrors}" field="rssUrl" as="list"></g:renderErrors>
+                                    <g:hasErrors bean="${updateUrlCOErrors}"/><g:renderErrors
+                                            bean="${updateUrlCOErrors}" field="rssUrl" as="list"/>
 
                                 </div>
 

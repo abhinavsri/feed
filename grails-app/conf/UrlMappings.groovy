@@ -9,7 +9,8 @@ class UrlMappings {
 
         // "/"(view: "/url/showUrl")
 
-        "/"(controller: "url", action: "showUrl")
+        "/"(view:"/landing/homepage")
+//        "/"(controller: "url", action: "showUrl")
         //"/"(controller: "feed",action: "rss")
         "500"(view: '/error')
         "500"(view: '/error')

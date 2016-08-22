@@ -3,7 +3,7 @@
 
 <html>
 <head>
-    <meta name="layout" content="lay">
+    <meta name="layout" content="theme">
     <title>RSS FEEDER</title>
 
     <link rel="stylesheet" href="${resource(dir: "css", file: "bootstrap.min.css")}"/>
@@ -60,7 +60,7 @@
                         <div class="row">
                             <div class="col-md-10 col-lg-10 col-xs-10 col-sm-10 col-md-offset-1 col-sm-offset-1 col-lg-offset-1 col-xs-offset-1"
                                  style="margin-bottom: 20px" ;>
-                                <label style="font-family: serif; color:#adadad">${raw(post.description)}</label>
+                                <label style="font-family: serif; color:#adadad">${raw(post.content)}</label>
                             </div></div>
 
                         <div class="row">

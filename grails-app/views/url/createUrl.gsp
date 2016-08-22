@@ -1,8 +1,6 @@
-
-
 <html>
 <head>
-    <meta name="layout" content="lay">
+    <meta name="layout" content="theme">
     <title>Create Url</title>
     %{--<link rel="stylesheet" href="${resource(dir: "css", file: "bootstrap.min.css")}"/>--}%
     %{--<script src="${resource(dir: "js", file: "jquery.min.js")}"></script>--}%
@@ -17,7 +15,7 @@
     }
 
     .panel-heading {
-        padding: 10px 15px;
+        /*padding: 10px 15px;*/
         border-bottom: 1px solid transparent;
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
@@ -33,17 +31,19 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+        %{--<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">--}%
 
-        </div>
+        %{--</div>--}%
 
-        <div class="col-md-6 col-md-offset-3">
-            <div class="panel panel-login">
+        <div class="col-md-6 col-md-offset-2 col-lg-6 col-lg-offset-2  ">
+            <div class="panel panel-default">
                 <div class="panel-heading" style="margin-bottom: -26px;">
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <label>Insert Url</label>
-                        </div>
+
+                    <div class="panel-title">
+                        <div class="row" >
+                            <div class="col-xs-6">
+                                <h3><label>Insert Url</label></h3>
+                            </div></div>
                     </div>
                     <hr>
                 </div>
@@ -61,8 +61,8 @@
                                     <label for="rssName">RssName<span class="required-indicator"></span></label>
                                     <input type="text" class="form-control" name="rssName" placeholder="RSS Name"
                                            id="rssName" tabindex="1">
-                                    <g:hasErrors bean="${createUrlCOError}"></g:hasErrors><g:renderErrors
-                                            bean="${createUrlCOError}" field="rssName" as="list"></g:renderErrors>
+                                    <g:hasErrors bean="${createUrlCOError}"/><g:renderErrors
+                                            bean="${createUrlCOError}" field="rssName" as="list"/>
 
                                 </div>
 
@@ -70,8 +70,8 @@
                                     <label for="rssUrl">RssUrl<span class="required-indicator"></span></label>
                                     <textarea class="form-control" name="rssUrl" placeholder="description" id="rssUrl"
                                               tabindex="1"></textarea>
-                                    <g:hasErrors bean="${createUrlCOError}"></g:hasErrors><g:renderErrors
-                                            bean="${createUrlCOError}" field="rssUrl" as="list"></g:renderErrors>
+                                    <g:hasErrors bean="${createUrlCOError}"/><g:renderErrors
+                                            bean="${createUrlCOError}" field="rssUrl" as="list"/>
 
                                 </div>
 

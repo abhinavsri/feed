@@ -9,11 +9,7 @@ class FeedController {
         Url url = Url.findById(params.id as Long)
         println(url.rssUrl)
         testFeedService.readFeed(url.rssUrl, params.id as Long)
-//        print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
-//        print(url.id)
-//        print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
         redirect(action: "list", params: [urlId: url.id])
-//        render(view: "/welcome", model: [postList: postList, total: total])
 
     }
 
@@ -38,5 +34,17 @@ class FeedController {
 
         println("%%%%%%%%%%%%%%%%%%%%" + postCount)
         render view: "/welcome", model: [postCount: postCount, postList: postList, urlId: urlId]
+    }
+    
+    def allList(Integer max) {
+        List postList = Feed.createCriteria().listDistinct {
+
+            maxResults(10)
+            order('pubDate', "desc")
+            firstResult(params.offset ? params.int('offset') : 0)
+
+        }
+        int postCount = Feed.count()
+        render view: "/viewAllFeed", model: [postCount: postCount, postList: postList]
     }
 }
